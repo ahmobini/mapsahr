@@ -1,10 +1,9 @@
-def positive_sum(arr):
-    # tmp = []
-    Sum = 0
-    for ch in arr:
-        if ch > 0:
-            Sum += ch
+def accum(s):
+    counter = 0
+    output = ""
+    for letter in s:
+        output += letter.upper() + letter.lower() * counter + '-'
+        counter += 1
+    return output[:-1]
 
-    return Sum
-
-print(positive_sum([1,2,3,4,-6,-2,2,-3]))
+print(accum(s='ZpglnRxqenU'))
