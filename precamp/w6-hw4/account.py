@@ -10,7 +10,6 @@ class Account:
 
     @staticmethod
     def check_username(username):
-        # pattern = input('enter username: ')
         if not re.search("^\w+_\w+$",username):
             raise Exception('invalid username')
         return username
@@ -30,7 +29,6 @@ class Account:
 
     @staticmethod
     def check_email(email):
-        # pattern = input('enter email: ')
         if not re.search("([A-Za-z0-9]+[.-_])+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,5})+",email):
             raise Exception('invalid email')
         return email
