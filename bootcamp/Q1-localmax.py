@@ -10,7 +10,7 @@ def local_max():
                 else:
                     lst[i+1] = lst[i]
                     count += 1
-            except:
+            except: #got help from Alireza code for exception part
                 lst[i-1] = lst[i]
                 count += 1
 
