@@ -1,7 +1,7 @@
 def local_max():
     count = 0
     lst = [int(x) for x in input().split()]
-    for i in range(1,len(lst)-1):
+    for i in range(1,len(lst)):
         if lst[i-1] < lst[i] > lst[i+1]:
             try:
                 if lst[i+2] > lst[i]:
