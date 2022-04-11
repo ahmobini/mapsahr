@@ -43,6 +43,7 @@ class Site:
 
 
 if __name__ == '__main__':
+
     site = Site('shalghamkala.com')
     user = User('alireza_helali', '09163311945',
                 'a.helali1995@gmail.com', "A.helali1995")

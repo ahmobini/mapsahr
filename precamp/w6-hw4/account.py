@@ -1,6 +1,7 @@
 import re, hashlib
 
 class Account:
+    test = []
 
     def __init__(self, username, password, phone, email):
         self.username = input('enter username: ')
