@@ -1,47 +1,26 @@
 from unittest import result
 
 
-def dec_to_bin(n):
+def change_dec_base(n, b=2):
     if n == 0:
         return [0]
     else:
         lst = []
         while n:
-            lst.append(n%2)
-            n=n//2
-        return lst[::-1]
+            lst.append(str(n%b))
+            n=n//b
+        return "".join(lst[::-1])
+
+
+def dec_to_bin(n):
+    return change_dec_base(n, 2)
 
 def dec_to_oct(n):
-    if n == 0:
-        return [0]
-    else:
-        res= []
-        result = []
+    return change_dec_base(n, 8)
 
-        lst = [int(i) for i in str(n)]
-        for ele in lst:
-            res.append(dec_to_bin(ele))
-            result = ",".join(map(str, res))
-
-        return result
-
-#  zfill(3) must be added
 
 def dec_to_hex(n):
-    if n == 0:
-        return [0]
-    else:
-        res= []
-        result = []
-
-        lst = [int(i) for i in str(n)]
-        for ele in lst:
-            res.append(dec_to_bin(ele))
-            result = ",".join(map(str, res))
-
-        return result
-
-# zfill(4) must be added
+    return change_dec_base(n, 16)
 
 
 
