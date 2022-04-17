@@ -8,7 +8,7 @@ from bisect import bisect
 
 def GetItemFromIndex(matrix, item):
     for row_idx, row in enumerate(matrix):
-        if (item > row[-1]) or (item< row[0]):
+        if (item > row[-1]) or (item < row[0]):
             continue
         else:
             col_idx = bisect(row, item)
