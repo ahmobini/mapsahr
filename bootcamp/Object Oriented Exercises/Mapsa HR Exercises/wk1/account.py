@@ -3,10 +3,10 @@ import re, hashlib
 class Account:
 
     def __init__(self, username, password, phone, email):
-        self.username = input('enter username: ')
-        self.password = check_password(password)
-        self.phone = check_phone(phone)
-        self.email = input('enter email: ')
+        self.username = self.check_username(username)
+        self.password = self.check_password(password)
+        self.phone = self.check_phone(phone)
+        self.email = self.check_email(email)
 
     @staticmethod
     def check_username(username):
