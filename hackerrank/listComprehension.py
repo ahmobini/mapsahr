@@ -12,19 +12,10 @@
 #!/usr/bin/env python
 
 if __name__ == '__main__':
-    x = int(input())
-    y = int(input())
-    z = int(input())
+
+    a = int(input())
+    b = int(input())
+    c = int(input())
     n = int(input())
-    num = []
-    for x in list(range(x+1)):
-        for y in list(range(y+1)):
-            for z in list(range(z+1)):
-                num.append([x, y, z])
-    for i in num:
-        if sum(i)==n:
-            num.remove(i)
-    print(num)
-
-
-    
+    lst = [[x, y, z] for x in range(a+1) for y in range(b+1) for z in range(c+1) if sum([x,y,z]) != n]
+    print(lst)
